@@ -1,0 +1,21 @@
+h1 {
+    color: #3300cc;
+
+}
+body {
+    background-image: url(bg_natural_sky.jpg);
+    background-attachment:fixed;
+}
+h2 {
+    color: #ff6633;
+    text-decoration:underline;
+}
+.t {
+  font-size: 27px;
+  color: red;
+  text-decoration:underline;
+}
+span {
+  font-size: 23px;
+  color: red;
+}
