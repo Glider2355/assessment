@@ -3,7 +3,7 @@ h1 {
 
 }
 body {
-    background-image: url("https://3.bp.blogspot.com/-Fym0qaZmJN0/U5hUXiuAh4I/AAAAAAAAhIU/oOV7Nw43S-s/s800/bg_pattern1_aozora.png");
+    background-image: url(bg_natural_sky.jpg);
     background-attachment:fixed;
 }
 h2 {
@@ -19,3 +19,76 @@ span {
   font-size: 23px;
   color: red;
 }
+button {
+  padding: 5px 20px;
+  background-color: #337AB7;
+  border-style: none;
+}
+input {
+  height: 20px;
+}
+
+.menuButton {
+  display: block;
+  height: 80px;
+  width: 80px;
+  background: pink;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.menuButton div {
+  height: 2px;
+  width: 60%;
+  background: #333;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s;
+}
+
+.menuButton div:nth-of-type(1) {
+  transform: translate(-50%, -15px);
+}
+
+.menuButton div:nth-of-type(3) {
+  transform: translate(-50%, 15px);
+  
+}
+
+.menuButton.active div:nth-of-type(2){
+  opacity: 0;
+}
+
+.menuButton.active div:nth-of-type(1) {
+  transform: rotate(45deg) translate(-50%, 0px);
+  transform-origin: 0% 50%;
+}
+
+.menuButton.active div:nth-of-type(3) {
+  transform: rotate(-45deg) translate(-50%, 0px);
+  transform-origin: 0% 50%;
+}
+
+nav {
+  opacity: 0;
+  visibility: hidden;
+  transition: .3s;
+}
+
+nav.active {
+  opacity: 1;
+  visibility: visible;
+  position: fixed;
+  z-index: 1;
+  background:blue;
+  height: 500px;
+  width: 180px;
+  top: 0px;
+  right:0px;
+  padding-top: 80px;
+}
+
