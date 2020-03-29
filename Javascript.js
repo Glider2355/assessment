@@ -26,7 +26,16 @@ const result = assessment(userName);
 paragraph.innerText = result;
 resultDivided.appendChild(paragraph);
 
+removeAllChildren(tweetDivided);
+const anchor = document.createElement ('a');
+const hrefValue = 'https://twitter.com/intent/tweet?button_hashtag=' + encodeURIComponent ('航空部診断') + '&ref_src=twsrc%5Etfw';
+anchor.setAttribute('href', hrefValue);
+anchor.className = 'twitter-hashtag-button';
+anchor.setAttribute('data-text',result);
+anchor.innerText='Tweet #航空部診断';
 
+tweetDivided.appendChild(anchor);
+twttr.widgets.load();
 };
 
 const answers = [
