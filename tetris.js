@@ -1,3 +1,9 @@
+document.addEventListener('keydown', audioPlay);
+function audioPlay() {
+  document.getElementById('audio').play();
+  document.removeEventListener('keydown', audioPlay);
+}
+
 const FIELD_COL = 10;
 const FIELD_ROW = 20;
 
