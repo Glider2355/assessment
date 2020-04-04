@@ -4,8 +4,8 @@ function audioPlay() {
   document.removeEventListener('keydown', audioPlay);
 }
 
-const FIELD_COL = 10;
-const FIELD_ROW = 20;
+let FIELD_COL = 10;
+let FIELD_ROW = 20;
 
 const BLOCK_SIZE = 30;
 
@@ -14,7 +14,7 @@ const GAME_SPEED = 1000;
 const SCREEN_W = BLOCK_SIZE * FIELD_COL;
 const SCREEN_H = BLOCK_SIZE * FIELD_ROW;
 
-const TETORO_SIZE = 4;
+let TETORO_SIZE = 4;
 
 let can = document.getElementById("can");
 let con = can.getContext("2d");
@@ -34,7 +34,7 @@ const TETORO_COLORS = [
     "#5B5" //7緑
 ];
 
-const TETORO_TYPES = [
+let TETORO_TYPES = [
     [], //0.空っぽ
     [                   //1.I
         [ 0, 0, 0, 0],
@@ -235,8 +235,9 @@ document.onkeydown = function(e){
             if( checkMove(- 1, 0) )tetoro_x--;
             break;
         case 38: //上
-            if( checkMove( 0, -1) )tetoro_y--;
-            break;
+            while( checkMove( 0, 1))
+             tetoro_y++;
+               break;
         case 39: //右
             if( checkMove( 1, 0) )tetoro_x++;
             break;
