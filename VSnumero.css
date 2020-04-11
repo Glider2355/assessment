@@ -1,0 +1,40 @@
+body {
+    background-image: url(bg_natural_sky.jpg);
+    background-attachment:fixed;
+}
+
+th,td {
+    border: solid 1px;
+    padding: 0px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th,td { 
+    width: 105px;
+    height: 31px;
+}
+
+input { 
+    width: 223px;
+    height: 20px;
+    position: relative;
+    top: -2px;
+}
+
+.sub {
+    width: 50px;
+    height: 27px;
+}
+
+td {
+    text-align: center;
+}
+
+.table2 {
+    position: absolute;
+    top: 35px;
+    left: 350px;
+}
